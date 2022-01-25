@@ -29,7 +29,7 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 
 | Problem | Solution | Blog Post | Stars |
 | ------- | -------- | --------- | ----- |
-| [Day 1: No Time for a Taxicab](https://adventofcode.com/2016/day/1)                  |[day_01.py](src/aoc/day_01.py)|-----------| :star: :star: |
+| [Day 1: No Time for a Taxicab](https://adventofcode.com/2016/day/1)                  |[day_01.py](src/aoc/day_01.py)|[day01.md](blog/day01.md)| :star: :star: |
 | [Day 2: Bathroom Security](https://adventofcode.com/2016/day/2)                      |[day_02.py](src/aoc/day_02.py)|-----------| :star: :star: |
 | [Day 3: Squares With Three Sides](https://adventofcode.com/2016/day/3)               |[day_03.py](src/aoc/day_03.py)|-----------| :star: :star: |
 | [Day 4: Security Through Obscurity](https://adventofcode.com/2016/day/4)             |[day_04.py](src/aoc/day_04.py)|-----------| :star: :star: |
