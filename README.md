@@ -14,6 +14,7 @@ Language of choice: [Python 3](https://www.python.org/)
 * [mypy](http://mypy-lang.org/)
 * [Flake8](https://flake8.pycqa.org/)
 * [pytest](https://docs.pytest.org/)
+* [tox](https://pypi.org/project/tox/)
 
 ### History
 
