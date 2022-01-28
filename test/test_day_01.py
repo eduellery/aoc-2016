@@ -1,6 +1,8 @@
-import pytest
+from typing import List
 
+import pytest
 from aoc.day_01 import Day01
+
 from resources import read_as_text
 
 aoc_input = Day01(read_as_text('test/day01.in').split(', '))
@@ -11,7 +13,7 @@ aoc_input = Day01(read_as_text('test/day01.in').split(', '))
     (['R2', 'R2', 'R2'], 2),
     (['R5', 'L5', 'R5', 'R3'], 12),
 ])
-def test_solve_1_examples(test_input: str, expected: int):
+def test_solve_1_examples(test_input: List[str], expected: int):
     assert Day01(test_input).solve1() == expected
 
 
