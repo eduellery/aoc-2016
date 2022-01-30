@@ -6,7 +6,7 @@ class Day03:
         self.values = values
 
     @staticmethod
-    def count_triangles(values):
+    def count_triangles(values) -> int:
         triangles = 0
         for value in values:
             sides = sorted(int(x) for x in value.split())
@@ -27,8 +27,8 @@ class Day03:
                 a = b = c = ''
         return vertical_values
 
-    def solve1(self) -> str:
+    def solve1(self) -> int:
         return self.count_triangles(self.values)
 
-    def solve2(self) -> str:
+    def solve2(self) -> int:
         return self.count_triangles(self.get_vertical_values())
