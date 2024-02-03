@@ -28,13 +28,11 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 
 ## Problems, Solutions and Blog Posts
 
-| Problem | Solution | Blog Post | Stars |
-| ------- | -------- | --------- | ----- |
-| [Day 1: No Time for a Taxicab](https://adventofcode.com/2016/day/1)                  |[day_01.py](src/aoc/day_01.py)|[day01.md](blog/day01.md)| :star: :star: |
-| [Day 2: Bathroom Security](https://adventofcode.com/2016/day/2)                      |[day_02.py](src/aoc/day_02.py)|-----------| :star: :star: |
-| [Day 3: Squares With Three Sides](https://adventofcode.com/2016/day/3)               |[day_03.py](src/aoc/day_03.py)|-----------| :star: :star: |
-| [Day 4: Security Through Obscurity](https://adventofcode.com/2016/day/4)             |[day_04.py](src/aoc/day_04.py)|-----------| :star: :star: |
-| [Day 5: How About a Nice Game of Chess?](https://adventofcode.com/2016/day/5)        |[day_05.py](src/aoc/day_05.py)|-----------| :star: :star: |
+| Problem | Solution | Blog Post |
+| ------- | -------- | --------- |
+| [Day 1: No Time for a Taxicab](https://adventofcode.com/2016/day/1)                  |[day_01.py](src/aoc/day_01.py)|[day01.md](blog/day01.md)|
+
+<!--- advent_readme_stars table --->
 
 [^disclaimer]: **Disclaimer**: I do AoC for fun and to learn new languages and new tricks. Part of my learning process (also for fun, even if I
 already have experience with some language), is to check what other users do and learn things from them. I can't help but incorporate
