@@ -1,0 +1,22 @@
+name: Update README ⭐
+on:
+  schedule:
+    - cron: "8 5 2 */4 *"  # Every 4 months, on day 1 at 05:08
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: k2bd/advent-readme-stars@v1
+        with:
+          year: 2016
+          userId: 220346
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update README stars
+          commit_user_name: AoC stars bot 🎄⭐️🤖
