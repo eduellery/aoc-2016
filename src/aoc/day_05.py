@@ -3,7 +3,7 @@ from hashlib import md5
 
 class Day05:
     def __init__(self, seed: str):
-        self.p1 = ''
+        self.p1 = ""
         self.p2 = [None] * 8
         i = 0
         while None in self.p2:

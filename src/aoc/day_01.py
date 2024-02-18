@@ -8,7 +8,7 @@ class Day01:
         seen = {position}
         found = None
         for instruction in instructions:
-            direction *= -1j if instruction[0] == 'R' else 1j
+            direction *= -1j if instruction[0] == "R" else 1j
             distance = int(instruction[1:])
             for i in range(distance):
                 position += direction

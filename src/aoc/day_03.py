@@ -15,16 +15,16 @@ class Day03:
         return triangles
 
     def get_vertical_values(self):
-        a = b = c = ''
+        a = b = c = ""
         vertical_values = []
         for i, value in enumerate(self.values):
             x, y, z = value.split()
-            a += x + ' '
-            b += y + ' '
-            c += z + ' '
+            a += x + " "
+            b += y + " "
+            c += z + " "
             if i % 3 == 2:
                 vertical_values.extend([a, b, c])
-                a = b = c = ''
+                a = b = c = ""
         return vertical_values
 
     def solve1(self) -> int:
