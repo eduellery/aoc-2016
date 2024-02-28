@@ -17,13 +17,16 @@ def test_solve_1_input():
 
 
 def test_solve_2_examples():
-    assert test_input.solve2() == """
+    assert (
+        test_input.solve2()
+        == """
     # #                                           
 # #                                               
  #                                                
  #                                                
                                                   
                                                   """
+    )
 
 
 @pytest.mark.skipif(not local_test, reason="Input files can not be shared")
