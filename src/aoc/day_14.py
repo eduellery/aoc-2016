@@ -8,19 +8,26 @@ class Day14:
         self.salt = salt + "{}"
         self.regex = compile(r"([abcdef0-9])\1{2}")
 
-    @functools.lru_cache(maxsize=None)
+    @functools.lru_cache(maxsize=100000)
     def getmd5(self, input: str):
         return md5(input.encode("utf-8")).hexdigest()
 
-    def process(self):
+    @functools.lru_cache(maxsize=100000)
+    def getlongmd5(self, input: str):
+        for _ in range(2017):
+            input = md5(input.encode("utf-8")).hexdigest()
+        return input
+
+    def process(self, long=False):
+        hash_function = self.getlongmd5 if long else self.getmd5
         i = 0
         j = 0
         while True:
-            match = search(self.regex, self.getmd5(self.salt.format(i)))
+            match = search(self.regex, hash_function(self.salt.format(i)))
             if match:
                 check = match.group()[0] * 5
                 if any(
-                    check in self.getmd5(self.salt.format(j))
+                    check in hash_function(self.salt.format(j))
                     for j in range(i + 1, i + 1001)
                 ):
                     j += 1
@@ -30,3 +37,6 @@ class Day14:
 
     def solve1(self) -> int:
         return self.process()
+
+    def solve2(self) -> int:
+        return self.process(True)
