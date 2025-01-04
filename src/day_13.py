@@ -31,4 +31,4 @@ class Day13:
         return self.seen[self.a, self.b]
 
     def solve2(self) -> str:
-        return len([self.seen[x] for x in self.seen.keys() if self.seen[x] <= 50])
+        return len([self.seen[x] for x in self.seen if self.seen[x] <= 50])

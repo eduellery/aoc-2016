@@ -9,7 +9,7 @@ class Day01:
         for instruction in instructions:
             direction *= -1j if instruction[0] == "R" else 1j
             distance = int(instruction[1:])
-            for i in range(distance):
+            for _i in range(distance):
                 position += direction
                 if not found and position in seen:
                     found = position
