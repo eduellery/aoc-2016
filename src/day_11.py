@@ -1,8 +1,8 @@
-from typing import List
 from re import findall
 
+
 class Day11:
-    def __init__(self, values: List[str]):
+    def __init__(self, values: list[str]):
         self.value = values
         self.p1 = [0,0,0,0]
         i = 0
@@ -12,7 +12,7 @@ class Day11:
         self.p2 = self.p1[:]
         self.p2[0] += 4
 
-    def count_moves(self, items: List[int]):
+    def count_moves(self, items: list[int]):
         moves = 0
         while items[-1] != sum(items):
             base_floor = 0

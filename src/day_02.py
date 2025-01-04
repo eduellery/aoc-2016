@@ -1,4 +1,3 @@
-from typing import List
 
 commands = {"U": -5, "D": 5, "R": 1, "L": -1}
 translate = {
@@ -19,7 +18,7 @@ translate = {
 
 
 class Day02:
-    def __init__(self, instructions: List[str]):
+    def __init__(self, instructions: list[str]):
         self.code_1 = ""
         self.code_2 = ""
         idx_1 = 5

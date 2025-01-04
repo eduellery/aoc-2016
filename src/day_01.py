@@ -1,8 +1,7 @@
-from typing import List
 
 
 class Day01:
-    def __init__(self, instructions: List[str]):
+    def __init__(self, instructions: list[str]):
         position = 0 + 0j
         direction = 0 + 1j
         seen = {position}

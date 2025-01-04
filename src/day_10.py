@@ -1,10 +1,9 @@
-from typing import List
 from collections import defaultdict
 from re import findall
 
 
 class Day10:
-    def __init__(self, values: List[str], chip1: int, chip2: int):
+    def __init__(self, values: list[str], chip1: int, chip2: int):
         bot = defaultdict(list)
         output = defaultdict(list)
         pipeline = {}

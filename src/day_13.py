@@ -1,4 +1,3 @@
-from typing import List, Set
 
 class Day13:
     def __init__(self, input: int, a = 31, b = 39):
@@ -10,17 +9,17 @@ class Day13:
         while len(frontier) > 0:
             new = frontier.pop()
             self.seen[(new[0], new[1])] = new[2]
-            frontier += [x for x in self.next(new) if not (x[0], x[1]) in self.seen or self.seen[(x[0], x[1])] > x[2]]
+            frontier += [x for x in self.next(new) if (x[0], x[1]) not in self.seen or self.seen[(x[0], x[1])] > x[2]]
 
-    def sum(self, pair: List[int]):
+    def sum(self, pair: list[int]):
         num = pair[0] * pair[0] + 3 * pair[0] + 2 * pair[0] * pair[1] + pair[1] + pair[1] * pair[1] + self.input
         return bin(num).count('1')
 
-    def wall(self, pair: List[int]):
+    def wall(self, pair: list[int]):
         inside = pair[0] >= 0 and pair[1] >= 0
         return self.sum(pair) %2 == 0 and inside
         
-    def next(self, pair: List[int]):
+    def next(self, pair: list[int]):
         coordinates = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         path = []
         for x in coordinates:

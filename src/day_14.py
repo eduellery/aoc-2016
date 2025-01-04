@@ -1,6 +1,6 @@
+import functools
 from hashlib import md5
 from re import compile, search
-import functools
 
 
 class Day14:

@@ -1,9 +1,7 @@
-from typing import List
 
 import pytest
 from aoc.day_01 import Day01
-
-from resources import read_as_text, file_exists
+from resources import file_exists, read_as_text
 
 local_test = file_exists("test/day01.in")
 aoc_input = Day01(read_as_text("test/day01.in").split(", ")) if local_test else None
@@ -17,7 +15,7 @@ aoc_input = Day01(read_as_text("test/day01.in").split(", ")) if local_test else 
         (["R5", "L5", "R5", "R3"], 12),
     ],
 )
-def test_solve_1_examples(test_input: List[str], expected: int):
+def test_solve_1_examples(test_input: list[str], expected: int):
     assert Day01(test_input).solve1() == expected
 
 

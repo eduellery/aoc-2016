@@ -1,8 +1,7 @@
-from typing import List
 
 
 class Day03:
-    def __init__(self, values: List[str]):
+    def __init__(self, values: list[str]):
         self.values = values
 
     @staticmethod

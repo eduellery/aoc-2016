@@ -1,8 +1,7 @@
-from typing import List
 
 
 class Day08:
-    def __init__(self, values: List[str]):
+    def __init__(self, values: list[str]):
         h, w = 6, 50
         self.grid = [[0] * w for _ in range(h)]
 

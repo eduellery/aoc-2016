@@ -1,18 +1,18 @@
-from typing import List, Dict
+
 
 class Day12:
-    def __init__(self, values: List[str]):
+    def __init__(self, values: list[str]):
         self.instructions = []
         for value in values:
             self.instructions.append(value.split(' '))
 
-    def read(self, registers: List[int], value: str):
+    def read(self, registers: list[int], value: str):
         try:
             return int(value)
         except:
             return registers[value]
         
-    def get_register(self, instructions: Dict[str, int], register: str, a = 0, b = 0, c = 0, d = 0):
+    def get_register(self, instructions: dict[str, int], register: str, a = 0, b = 0, c = 0, d = 0):
         ip = 0
     
         registers = {
