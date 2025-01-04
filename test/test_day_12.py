@@ -1,10 +1,10 @@
 import pytest
-from aoc.day_12 import Day12
+from day_12 import Day12
 from resources import file_exists, read_as_string_list
 
-local_test = file_exists("test/day12.in")
-aoc_input = Day12(read_as_string_list("test/day12.in")) if local_test else None
-test_input = Day12(read_as_string_list("test/day12.example"))
+local_test = file_exists("res/day12.in")
+aoc_input = Day12(read_as_string_list("res/day12.in")) if local_test else None
+test_input = Day12(read_as_string_list("res/day12.example"))
 
 
 def test_solve_1_examples():

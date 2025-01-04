@@ -28,8 +28,8 @@ select = [
 ]
 ignore = ["B006", "E501"]
 
-#[tool.uv.workspace]
-#members = ["test"]
+[tool.uv.workspace]
+members = ["test"]
 
 [project.scripts]
 aoc-2016 = "aoc_2016:main"

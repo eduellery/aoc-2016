@@ -1,11 +1,11 @@
 import pytest
-from aoc.day_04 import Day04
+from day_04 import Day04
 from resources import file_exists, read_as_text
 
-local_test = file_exists("test/day04.in")
-aoc_input = Day04(read_as_text("test/day04.in")) if local_test else None
-test_part1_input = Day04(read_as_text("test/day04.part1.example"))
-test_part2_input = Day04(read_as_text("test/day04.part2.example"))
+local_test = file_exists("res/day04.in")
+aoc_input = Day04(read_as_text("res/day04.in")) if local_test else None
+test_part1_input = Day04(read_as_text("res/day04.part1.example"))
+test_part2_input = Day04(read_as_text("res/day04.part2.example"))
 
 
 def test_solve_1_examples():

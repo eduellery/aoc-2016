@@ -1,9 +1,9 @@
 import pytest
-from aoc.day_02 import Day02
+from day_02 import Day02
 from resources import file_exists, read_as_string_list
 
-local_test = file_exists("test/day02.in")
-aoc_input = Day02(read_as_string_list("test/day02.in")) if local_test else None
+local_test = file_exists("res/day02.in")
+aoc_input = Day02(read_as_string_list("res/day02.in")) if local_test else None
 test_input = Day02(["ULL", "RRDDD", "LURDL", "UUUUD"])
 
 

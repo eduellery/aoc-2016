@@ -1,10 +1,10 @@
 
 import pytest
-from aoc.day_01 import Day01
+from day_01 import Day01
 from resources import file_exists, read_as_text
 
-local_test = file_exists("test/day01.in")
-aoc_input = Day01(read_as_text("test/day01.in").split(", ")) if local_test else None
+local_test = file_exists("res/day01.in")
+aoc_input = Day01(read_as_text("res/day01.in").split(", ")) if local_test else None
 
 
 @pytest.mark.parametrize(
