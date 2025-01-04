@@ -1,6 +1,7 @@
 import pytest
-from day_08 import Day08
 from resources import file_exists, read_as_string_list
+
+from day_08 import Day08
 
 local_test = file_exists("res/day08.in")
 aoc_input = Day08(read_as_string_list("res/day08.in")) if local_test else None
