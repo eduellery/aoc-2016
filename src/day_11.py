@@ -5,8 +5,7 @@ class Day11:
     def __init__(self, values: list[str]):
         self.value = values
         self.p1 = [0,0,0,0]
-        i = 0
-        for value in values:
+        for i, value in enumerate(values):
             self.p1[i] = len(findall(r'(generator|microchip)', value))
             i += 1
         self.p2 = self.p1[:]

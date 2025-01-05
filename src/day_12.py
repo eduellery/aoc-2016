@@ -9,7 +9,7 @@ class Day12:
     def read(self, registers: list[int], value: str):
         try:
             return int(value)
-        except:
+        except ValueError:
             return registers[value]
         
     def get_register(self, instructions: dict[str, int], register: str, a = 0, b = 0, c = 0, d = 0):
@@ -32,10 +32,9 @@ class Day12:
                 registers[ins[1]] += 1
             elif ins[0] == 'dec':
                 registers[ins[1]] -= 1    
-            elif ins[0] == 'jnz':
-                if self.read(registers, ins[1]) != 0:                
-                    ip += self.read(registers, ins[2])
-                    ip -= 1
+            elif ins[0] == 'jnz' and self.read(registers, ins[1]) != 0:                
+                ip += self.read(registers, ins[2])
+                ip -= 1
             ip += 1
 
         return registers[register]
