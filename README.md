@@ -1,6 +1,6 @@
 # [Advent of Code 2016](https://adventofcode.com/2016)
 
-![Tests](https://github.com/eduellery/aoc-2016/actions/workflows/python-package.yml/badge.svg)
+![Tests](https://github.com/eduellery/aoc-2016/actions/workflows/aoc-2016.yml/badge.svg)
 
 My answers for Advent of Code 2016.[^disclaimer]
 
