@@ -11,7 +11,7 @@ class Day10:
             if value.startswith("value"):
                 n, b = map(int, findall(r"-?\d+", value))
                 bot[b].append(n)
-            elif value.startswith("bot"):
+            else: # value.startswith("bot")
                 who, n1, n2 = map(int, findall(r"-?\d+", value))
                 t1, t2 = findall(r" (bot|output)", value)
                 pipeline[who] = (t1, n1), (t2, n2)

@@ -13,4 +13,4 @@ dependencies = [
 aoc-2016 = { workspace = true }
 
 [tool.pytest.ini_options]
-addopts = "-ra"
+addopts = "-ra --cov=../src --cov-config=.coveragerc --cov-report=term-missing --cov-branch --durations=0"

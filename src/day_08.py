@@ -16,7 +16,7 @@ class Day08:
                 column = [row[x] for row in self.grid]
                 for a in range(h):
                     self.grid[a][x] = column[a - vshift]
-            elif value.startswith("rotate row"):
+            else: # value.startswith("rotate row")
                 y, hshift = map(int, value.split("rotate row y=")[1].split(" by "))
                 self.grid[y] = self.grid[y][-hshift:] + self.grid[y][:-hshift]
 

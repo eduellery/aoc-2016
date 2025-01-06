@@ -26,7 +26,10 @@ select = [
     # isort
     "I",
 ]
-ignore = ["B006", "E501"]
+ignore = [
+    # Line too long
+    "E501",
+]
 
 [tool.uv.workspace]
 members = ["test"]

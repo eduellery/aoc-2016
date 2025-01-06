@@ -1,0 +1,2 @@
+[run]
+omit = ../src/aoc_2016/*
