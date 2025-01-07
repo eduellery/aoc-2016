@@ -2,12 +2,13 @@
 
 YR=2016
 DAY=$1
+AOC_DEBUG=0
 
 if [ -z "$DAY" ]; then
     DAY=$(date +%e | tr -d " ")
 fi
 
-if [ -n "$AOC_SESSION" ] && [ -n "$AOC_DEBUG"]; then
+if [ -n "$AOC_SESSION" ] && [ "$AOC_DEBUG" -ne 0 ]; then
     echo "session is present"
 elif [ -r .aocsession ]; then
     echo "getting value from .aocsession file"
