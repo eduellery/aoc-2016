@@ -7,7 +7,7 @@ if [ -z "$DAY" ]; then
     DAY=$(date +%e | tr -d " ")
 fi
 
-if [ -n "$AOC_SESSION" ] && [ -z "$AOC_DEBUG"]; then
+if [ -n "$AOC_SESSION" ] && [ -n "$AOC_DEBUG"]; then
     echo "session is present"
 elif [ -r .aocsession ]; then
     echo "getting value from .aocsession file"
