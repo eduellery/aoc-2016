@@ -24,14 +24,6 @@ class Day15:
             _, mod, _, x = map(int, findall(r"\b\d+\b", value))
             self.discs.append((mod, x))
 
-    def normalize(self, discs):
-        factors = []
-        for i, value in enumerate(discs, start=1):
-            mod, x = value
-            x = (mod - x - i) % mod
-            factors.append((mod, x))
-        return factors
-
     def solve1(self) -> int:
         return find_alignment(normalize(self.discs))
 
