@@ -1,6 +1,15 @@
 from re import findall
 
 
+def normalize(discs):
+    factors = []
+    for i, value in enumerate(discs, start=1):
+        mod, x = value
+        x = (mod - x - i) % mod
+        factors.append((mod, x))
+    return factors
+
+
 def find_alignment(factors):
     t = 0
     while True:
@@ -10,14 +19,21 @@ def find_alignment(factors):
 
 class Day15:
     def __init__(self, values: list[str]):
-        self.factors = []
-        for i, value in enumerate(values, start=1):
+        self.discs = []
+        for value in values:
             _, mod, _, x = map(int, findall(r"\b\d+\b", value))
+            self.discs.append((mod, x))
+
+    def normalize(self, discs):
+        factors = []
+        for i, value in enumerate(discs, start=1):
+            mod, x = value
             x = (mod - x - i) % mod
-            self.factors.append((mod, x))
+            factors.append((mod, x))
+        return factors
 
     def solve1(self) -> int:
-        return find_alignment(self.factors)
+        return find_alignment(normalize(self.discs))
 
     def solve2(self) -> int:
-        return 2
+        return find_alignment(normalize(self.discs + [(11,0)]))
