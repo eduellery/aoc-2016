@@ -50,6 +50,8 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 | [Day 11](https://adventofcode.com/2016/day/11) | ⭐ | ⭐ |
 | [Day 12](https://adventofcode.com/2016/day/12) | ⭐ | ⭐ |
 | [Day 13](https://adventofcode.com/2016/day/13) | ⭐ | ⭐ |
+| [Day 14](https://adventofcode.com/2016/day/14) | ⭐ | ⭐ |
+| [Day 15](https://adventofcode.com/2016/day/15) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
 [^disclaimer]: **Disclaimer**: I do AoC for fun and to learn new languages and new tricks. Part of my learning process (also for fun, even if I
