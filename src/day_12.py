@@ -1,4 +1,3 @@
-from collections import defaultdict
 
 class Day12:
     def __init__(self, values: list[str]):

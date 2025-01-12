@@ -1,5 +1,5 @@
 from hashlib import md5
-from typing import Optional
+
 
 class Day05:
     def __init__(self, seed: str):
