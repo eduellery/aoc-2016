@@ -1,4 +1,4 @@
-
+from collections import defaultdict
 
 class Day12:
     def __init__(self, values: list[str]):
@@ -6,15 +6,15 @@ class Day12:
         for value in values:
             self.instructions.append(value.split(' '))
 
-    def read(self, registers: list[int], value: str):
+    def read(self, registers: dict[str, int], value: str) -> int:
         try:
             return int(value)
         except ValueError:
             return registers[value]
-        
-    def get_register(self, instructions: dict[str, int], register: str, a = 0, b = 0, c = 0, d = 0):
+
+    def get_register(self, instructions: list[list[str]], register: str, a = 0, b = 0, c = 0, d = 0) -> int:
         ip = 0
-    
+
         registers = {
             'a': a,
             'b': b,
@@ -31,7 +31,7 @@ class Day12:
             elif ins[0] == 'inc':
                 registers[ins[1]] += 1
             elif ins[0] == 'dec':
-                registers[ins[1]] -= 1    
+                registers[ins[1]] -= 1
             elif ins[0] == 'jnz' and self.read(registers, ins[1]) != 0:                
                 ip += self.read(registers, ins[2])
                 ip -= 1
@@ -42,5 +42,5 @@ class Day12:
     def solve1(self) -> int:
         return self.get_register(self.instructions, 'a')
 
-    def solve2(self) -> str:
+    def solve2(self) -> int:
         return self.get_register(self.instructions, 'a', c = 1)
