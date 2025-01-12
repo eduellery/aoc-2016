@@ -5,7 +5,7 @@ class Day07:
     def __init__(self, values: list[str]):
         self.values = values
 
-    def solve1(self) -> str:
+    def solve1(self) -> int:
         p1 = 0
         for value in self.values:
             hypernet = False
@@ -19,7 +19,7 @@ class Day07:
                         break
         return p1
 
-    def solve2(self) -> str:
+    def solve2(self) -> int:
         p2 = 0
         for value in self.values:
             for outside in findall(r"(.*?)(?:\[.*?\]|$)", value):

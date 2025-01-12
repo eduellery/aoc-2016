@@ -8,7 +8,8 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "ruff>=0.8.3",
+    "mypy>=1.14.1",
+    "ruff>=0.9.0",
 ]
 
 [tool.ruff.lint]
@@ -30,6 +31,9 @@ ignore = [
     # Line too long
     "E501",
 ]
+
+[tool.mypy]
+show_column_numbers = true
 
 [tool.uv.workspace]
 members = ["test"]

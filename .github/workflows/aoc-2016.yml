@@ -29,6 +29,9 @@ jobs:
     - name: Ruff it
       run: uv run ruff check
 
+    - name: MyPy
+      run: uv run mypy .
+
     - name: Test it
       run: |
         for i in {1..25}; do ./get_input.sh $i; done

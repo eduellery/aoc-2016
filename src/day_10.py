@@ -5,7 +5,7 @@ from re import findall
 class Day10:
     def __init__(self, values: list[str], chip1: int, chip2: int):
         bot = defaultdict(list)
-        output = defaultdict(list)
+        output: dict[int, list[int]] = defaultdict(list)
         pipeline = {}
         for value in values:
             if value.startswith("value"):
@@ -32,5 +32,5 @@ class Day10:
     def solve1(self) -> int:
         return self.p1
 
-    def solve2(self) -> str:
+    def solve2(self) -> int:
         return self.p2
