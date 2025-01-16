@@ -22,3 +22,20 @@ def test_solve_1_examples(test_input: str, expected: str):
 @pytest.mark.skipif(not local_test, reason="Input files can not be shared")
 def test_solve_1_input():
     assert aoc_input.solve1() == "DUDDRLRRRD"
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        ("ihgpwlah", 370),
+        ("kglvqrro", 492),
+        ("ulqzkmiv", 830),
+    ],
+)
+def test_solve_2_examples(test_input: str, expected: int):
+    assert Day17(test_input).solve2() == expected
+
+
+@pytest.mark.skipif(not local_test, reason="Input files can not be shared")
+def test_solve_2_input():
+    assert aoc_input.solve2() == 578
+
