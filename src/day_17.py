@@ -48,5 +48,5 @@ class Day17:
     def solve1(self) -> str:
         return solve([[self.value, 0, 0]], len(self.value))
 
-    def solve2(self) -> str:
+    def solve2(self) -> int:
         return len(solve([[self.value, 0, 0]], len(self.value), False))
