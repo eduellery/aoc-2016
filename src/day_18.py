@@ -13,10 +13,16 @@ class Day18:
         self.traps = [c == '.' for c in value]
         self.traps = [True] + self.traps + [True]
 
-    def solve1(self, rounds: int = 40) -> str:
+    def solve(self, rounds: int) -> int:
         row = self.traps
         count = sum(row) - 2
         for _ in range(1, rounds):
             row = next_row(row)
             count += sum(row) - 2
         return count
+
+    def solve1(self, rounds: int = 40) -> int:
+        return self.solve(rounds)
+
+    def solve2(self) -> int:
+        return self.solve(400000)

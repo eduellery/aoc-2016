@@ -22,3 +22,7 @@ def test_solve_1_examples(test_input: str, rounds: int, expected: int):
 def test_solve_1_input():
     assert aoc_input.solve1() == 2013
 
+
+@pytest.mark.skipif(not local_test, reason="Input files can not be shared")
+def test_solve_2_input():
+    assert aoc_input.solve2() == 20006289
