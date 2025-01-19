@@ -19,6 +19,10 @@ def read_as_string_list(filename: str) -> list[str]:
         return file.read().splitlines()
 
 
+def read_as_int(filename: str) -> int:
+    with open(filename) as file:
+        return int(file.read())
+
 def read_as_int_list(filename: str) -> list[int]:
     with open(filename) as file:
         return list(map(int, file.read().splitlines()))
