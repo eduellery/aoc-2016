@@ -14,3 +14,12 @@ def test_solve_1_examples():
 @pytest.mark.skipif(not local_test, reason="Input files can not be shared")
 def test_solve_1_input():
     assert aoc_input.solve1() == 1841611
+
+
+def test_solve_2_examples():
+    assert Day19(5).solve2() == 2
+
+
+@pytest.mark.skipif(not local_test, reason="Input files can not be shared")
+def test_solve_2_input():
+    assert aoc_input.solve2() == 1423634
