@@ -1,4 +1,10 @@
-def clip_range(current, clipped):
+def remove(ips, low, high):
+    new_ranges = []
+    for current_range in ips:
+        new_ranges.extend(clip(current_range, (low, high)))
+    return new_ranges
+
+def clip(current, clipped):
     if current[0] > clipped[1] or current[1] < clipped[0]:
         return [current]
     result = []
@@ -9,22 +15,20 @@ def clip_range(current, clipped):
     return result
 
 class Day20:
-    def __init__(self, values: list[str]):
-        self.ranges = []
+    def __init__(self, values: list[str], max: int = 4294967295):
+        ranges = []
         for v in values:
-            self.ranges.append(tuple(map(int, v.split("-"))))
+            ranges.append(tuple(map(int, v.split("-"))))
+        self.allowed_ips = [(0, max)]
+        for pair in ranges:
+            self.allowed_ips = remove(self.allowed_ips, pair[0], pair[1])
 
-    def remove_range(self, ips, low, high):
-        new_ranges = []
-        for current_range in ips:
-            new_ranges.extend(clip_range(current_range, (low, high)))
-        return new_ranges
 
-    def solve1(self, max: int = 4294967295) -> int:
-        ips = [(0, max)]
-        for pair in self.ranges:
-            ips = self.remove_range(ips, pair[0], pair[1])
-        return ips[0][0]
+    def solve1(self, ) -> int:
+        return self.allowed_ips[0][0]
 
     def solve2(self) -> int:
-        return 2
+        count = 0
+        for pair in self.allowed_ips:
+            count += pair[1] - pair[0] + 1
+        return count
