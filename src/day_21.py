@@ -33,61 +33,71 @@ def reverse_position(i, j, int_to_char):
     chars[i:j+1] = reversed(chars[i:j+1])
     return "".join(chars)
 
-def left_shift(n, int_to_char):
+def shift(n, int_to_char, right, reverse):
     n %= len(int_to_char)
     chars = list(generate_string(int_to_char))
+    if reverse:
+        right = not right
+    if right:
+        n = -n
     return "".join(chars[n:] + chars[:n])
 
-def right_shift(n, int_to_char):
-    n %= len(int_to_char)
-    chars = list(generate_string(int_to_char))
-    return "".join(chars[-n:] + chars[:-n])
-
-def move(i, j, int_to_char):
+def move(i, j, int_to_char, reverse):
+    if reverse:
+        i, j = j, i
     chars = list(generate_string(int_to_char))
     chars.insert(j, chars.pop(i))
     return "".join(chars)
 
-def rotate(x, char_to_int, int_to_char):
+def rotate(x, char_to_int, int_to_char, reverse):
     i = char_to_int[x]
-    n = i + 2 if i >= 4 else i + 1
-    return right_shift(n, int_to_char)
+    if reverse:
+        if i % 2:
+            steps = (i + 1) // 2
+        elif i == 0:
+            steps = 1
+        else:
+            steps = ((i + len(char_to_int)) // 2) + 1
+        return shift(steps, int_to_char, True, reverse)
+    else:
+        return shift(i + 2 if i >= 4 else i + 1, int_to_char, True, reverse)
 
 class Day21:
-    def __init__(self, instructions: list[str], input: str = "abcdefgh"):
+    def __init__(self, instructions: list[str], input: str):
         self.input = input
         self.instructions = instructions
 
-    def solve1(self) -> str:
+    def solve(self, reverse: int = False) -> str:
         char_to_int, int_to_char = create_maps(self.input)
-        for instruction in self.instructions:
+        instructions = self.instructions if not reverse else self.instructions[::-1]
+        for instruction in instructions:
             if search(r"swap position*", instruction):
                 i, j = map(int, findall(r"(\d)", instruction))
                 swap_position(i, j, char_to_int, int_to_char)
-            if search(r"swap letter*", instruction):
+            elif search(r"swap letter*", instruction):
                 x, y = findall(r"letter (\w)", instruction)
                 swap_letter(x, y, char_to_int, int_to_char)
-            if search(r"reverse positions*", instruction):
+            elif search(r"reverse positions*", instruction):
                 i, j = map(int, findall(r"(\d)", instruction))
                 reversed = reverse_position(i, j, int_to_char)
                 char_to_int, int_to_char = create_maps(reversed)
-            if search(r"rotate left*", instruction):
-                [n] = map(int, findall(r"(\d)", instruction))
-                reversed = left_shift(n, int_to_char)
-                char_to_int, int_to_char = create_maps(reversed)
-            if search(r"rotate right*", instruction):
-                [n] = map(int, findall(r"(\d)", instruction))
-                reversed = right_shift(n, int_to_char)
-                char_to_int, int_to_char = create_maps(reversed)
-            if search(r"move position*", instruction):
+            elif search(r"move position*", instruction):
                 i, j = map(int, findall(r"(\d)", instruction))
-                moved = move(i, j, int_to_char)
+                moved = move(i, j, int_to_char, reverse)
                 char_to_int, int_to_char = create_maps(moved)
-            if search(r"rotate based*", instruction):
+            elif search(r"rotate based*", instruction):
                 [x] = findall(r"letter (\w)", instruction)
-                rotated = rotate(x, char_to_int, int_to_char)
+                rotated = rotate(x, char_to_int, int_to_char, reverse)
                 char_to_int, int_to_char = create_maps(rotated)
+            else: # Rotate left or right...
+                [n] = map(int, findall(r"(\d)", instruction))
+                right = search(r"right", instruction)
+                reversed = shift(n, int_to_char, right, reverse)
+                char_to_int, int_to_char = create_maps(reversed)
         return generate_string(int_to_char)
 
+    def solve1(self) -> str:
+        return self.solve()
+
     def solve2(self) -> str:
-        return "abcdefgh"
+        return self.solve(True)
