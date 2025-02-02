@@ -19,4 +19,4 @@ def test_solve_1_input():
 
 @pytest.mark.skipif(not local_test, reason="Input files can not be shared")
 def test_solve_2_input():
-    assert aoc_input.solve2() == 2
+    assert aoc_input.solve2() == 479009184
