@@ -17,6 +17,10 @@ def test_solve_1_input():
     assert aoc_input.solve1() == 474
 
 
-#@pytest.mark.skipif(not local_test, reason="Input files can not be shared")
-#def test_solve_2_input():
-#    assert aoc_input.solve2() == 2
+def test_solve_2_examples():
+    assert test_input.solve2() == 20
+
+
+@pytest.mark.skipif(not local_test, reason="Input files can not be shared")
+def test_solve_2_input():
+    assert aoc_input.solve2() == 696

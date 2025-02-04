@@ -36,7 +36,7 @@ class Day24:
                             path.append(self.map[path[-1]]['prev'])
                         return path[-1::-1] # Return reverse, start to end of path
 
-    def solve1(self) -> int:
+    def solve(self, end_at_start = False) -> int:
         keys = self.nodes.keys()
         distances = {}
         for p in combinations(keys, 2):
@@ -45,13 +45,18 @@ class Day24:
             distances[(p[1], p[0])] = len(path)
         result = 1_000_000_000
         for perm in permutations(keys):
-            if (perm[0] != "0"):
+            if perm[0] != "0":
                 continue
+            if end_at_start:
+                perm += ("0",)
             distance = 0
             for pair in pairwise(perm):
                 distance += distances[pair] - 1
             result = min(distance, result)
         return result
 
+    def solve1(self) -> int:
+        return self.solve()
+
     def solve2(self) -> int:
-        return 2
+        return self.solve(True)
