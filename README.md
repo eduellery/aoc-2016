@@ -60,6 +60,9 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 | [Day 20](https://adventofcode.com/2016/day/20) | ⭐ | ⭐ |
 | [Day 21](https://adventofcode.com/2016/day/21) | ⭐ | ⭐ |
 | [Day 22](https://adventofcode.com/2016/day/22) | ⭐ | ⭐ |
+| [Day 23](https://adventofcode.com/2016/day/23) | ⭐ | ⭐ |
+| [Day 24](https://adventofcode.com/2016/day/24) | ⭐ | ⭐ |
+| [Day 25](https://adventofcode.com/2016/day/25) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
 ## Other
