@@ -62,6 +62,18 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 | [Day 22](https://adventofcode.com/2016/day/22) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
+## Other
+
+### Advent of Code 2016 Final Art
+
+![Advent of Code 2016 Final Art](doc/aoc2016.png "Advent of Code 2016 Final Art")
+
+### Credits
+
+[Ned Batchelder](https://github.com/nedbat) did an amazing job on his [aoc2015 repo](https://github.com/nedbat/adventofcode2015). I took a lot of "inspiration" from there. :smile:
+
+I also learned stuff from several other developers with much less extent. You can find some amazing people through this event.
+
 [^disclaimer]: **Disclaimer**: I do AoC for fun and to learn new languages and new tricks. Part of my learning process (also for fun, even if I
 already have experience with some language), is to check what other users do and learn things from them. I can't help but incorporate
 their cool, clean, concise ideas into my code. Sometimes their code is *so* much better than mine that I end up replacing my whole code!
