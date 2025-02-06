@@ -33,6 +33,10 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 | ------- | -------- | --------- |
 | [Day 1: No Time for a Taxicab](https://adventofcode.com/2016/day/1)                  |[day_01.py](src/aoc/day_01.py)|[day01.md](blog/day01.md)|
 
+### Statistics
+
+Coverage and other information can be found [here](https://github.com/eduellery/aoc-2016/actions/workflows/aoc-2016.yml).
+
 <!--- advent_readme_stars table --->
 ## 2016 Results
 
@@ -73,7 +77,7 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 
 ### Credits
 
-[Ned Batchelder](https://github.com/nedbat) did an amazing job on his [aoc2015 repo](https://github.com/nedbat/adventofcode2015). I took a lot of "inspiration" from there. :smile:
+[Ned Batchelder](https://github.com/nedbat) did an amazing job on his [aoc2016 repo](https://github.com/nedbat/adventofcode2016). I took a lot of "inspiration" from there. :smile:
 
 I also learned stuff from several other developers with much less extent. You can find some amazing people through this event.
 
