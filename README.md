@@ -32,7 +32,7 @@ I actually started Advent of Code in 2017 using Java. I decided to do the previo
 | Problem | Solution | Blog Post |
 | ------- | -------- | --------- |
 | [Day 1: No Time for a Taxicab](https://adventofcode.com/2016/day/1)                  |[day_01.py](src/day_01.py)|[day01.md](doc/day01.md)|
-| [Day 19: An Elephant Named Joseph](https://adventofcode.com/2016/day/19)                  |[day_01.py](src/day_19.py)|[day01.md](doc/day19.md)|
+| [Day 19: An Elephant Named Joseph](https://adventofcode.com/2016/day/19)                  |[day_19.py](src/day_19.py)|[day19.md](doc/day19.md)|
 
 ### Statistics
 
